@@ -1,0 +1,14 @@
+<h3>Your Orders</h3>
+
+<tabset class="member-tabs mb-3">
+    <tab heading="All">
+       <app-order-table [orders]="orders"></app-order-table>
+    </tab>
+    <tab class="mb-4" heading="Processing">
+        <app-order-table [orders]="processingOrders"></app-order-table>
+    </tab>
+
+    <tab heading="Successful">
+        <app-order-table [orders]="successOrders"></app-order-table>
+    </tab>
+</tabset>

@@ -1,0 +1,10 @@
+.bold {
+    font-weight: bold;
+}
+
+.divider {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 1px;
+    background: #a4a4a4;
+}

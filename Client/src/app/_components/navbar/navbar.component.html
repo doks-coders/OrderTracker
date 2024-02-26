@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Order Tracker</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+      aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <ng-container *ngIf="(authenticationService.currentUser$|async)">
+
+          <ng-container *ngIf="(authenticationService.currentUser$|async)?.roles?.includes('Member')">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/view-orders" routerLinkActive="active">View Orders</a>
+            </li>
+          </ng-container>
+
+          <ng-container *ngIf="(authenticationService.currentUser$|async)?.roles?.includes('Admin')">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/manage-orders" routerLinkActive="active">Manage Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/manage-roles" routerLinkActive="active">Manage Roles</a>
+            </li>
+          </ng-container>
+
+          <li class="nav-item" *ngIf="(authenticationService.currentUser$|async)?.roles?.includes('Driver')">
+            <a class="nav-link" routerLink="/rider-delivery" routerLinkActive="active">Rider Delivery</a>
+          </li>
+        </ng-container>
+      </ul>
+
+      <ul class="navbar-nav" >
+        <li *ngIf="!(authenticationService.currentUser$|async)" class="nav-item">
+          <div class="dropdown" dropdown>
+            <a class="nav-link text-light" dropdownToggle>Account </a>
+            <div class="dropdown-menu" *dropdownMenu>
+              <a class="nav-link dropdown-item" routerLink="/register">Register</a>
+              <a class="nav-link dropdown-item" routerLink="/login">Log In</a>
+            </div>
+          </div>
+        </li>
+        <li *ngIf="(authenticationService.currentUser$|async)" class="nav-item">
+          <div class="dropdown" dropdown>
+            <a class="nav-link text-light" dropdownToggle>Welcome {{
+              (authenticationService.currentUser$|async)?.email}} </a>
+            <div class="dropdown-menu" *dropdownMenu>
+              <a routerLink="/edit-user" class="nav-link dropdown-item">User Settings</a>
+              <a class="nav-link dropdown-item" (click)="logout()">Log Out</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>

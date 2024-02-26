@@ -1,0 +1,23 @@
+<div style="height: 20px;"></div>
+<table *ngIf="orders.length" datatable class="hover table">
+    <thead>
+        <tr>
+            <th>S/N</th>
+            <th>Product Name</th>
+            <th>Reciever</th>
+            <th>Payment Status</th>
+            <th>Order Status</th>
+            <th>Date Created</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr (click)="clickItem(order)" *ngFor="let order of orders">
+            <td>{{order.s_n}}</td>
+            <td>{{order.product_name}}</td>
+            <td>{{order.reciever_name}}</td>
+            <td>{{order.paymentStatus}}</td>
+            <td>{{order.orderStatus}}</td>
+            <td>{{order.dateCreated|date}}</td>
+        </tr>
+    </tbody>
+</table>

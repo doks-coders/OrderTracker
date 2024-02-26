@@ -1,0 +1,62 @@
+<form [formGroup]="orderDetails" (ngSubmit)="createOrder()" >
+<div class="row">
+
+    
+    <div class="col-md-5 p-4">
+        <h3>My Details</h3>
+        
+            <app-input [formControl]="$any(orderDetails.controls['name'])" [type]="'text'"
+                [text]="'Full Name'"></app-input>
+            <app-input [formControl]="$any(orderDetails.controls['country'])" [type]="'text'"
+                [text]="'Country'"></app-input>
+            <app-input [formControl]="$any(orderDetails.controls['address'])" [type]="'text'"
+                [text]="'Address'"></app-input>
+            <app-input [formControl]="$any(orderDetails.controls['phone_number'])" [type]="'text'"
+                [text]="'Phone Number'"></app-input>
+      
+
+        <h3 class="mt-3">Reciever Details</h3>
+        
+            <app-input [text]="'Email'" [formControl]="$any(orderDetails.controls['reciever_email'])"
+                type="text"></app-input>
+            <app-input [text]="'Name'" [formControl]="$any(orderDetails.controls['reciever_name'])"
+                type="text"></app-input>
+            <app-input [text]="'Phone Number'" [formControl]="$any(orderDetails.controls['reciever_phone_number'])"
+                type="text"></app-input>
+            <app-input [text]="'Location'" [formControl]="$any(orderDetails.controls['reciever_location'])"
+                type="text"></app-input>
+    </div>
+    <div class="col-md-5 p-4">
+        <h3>Order Information</h3>
+        
+            <div class="mb-3">
+                <input type="text" class="form-control" formControlName="product_name" placeholder="Name of Product">
+            </div>
+
+            <div class="mb-3">
+                <textarea rows="4" type="text" class="form-control" formControlName="description"
+                    placeholder="Description"></textarea>
+            </div>
+
+            <div>
+                <div class="mb-2"> <b>Size:</b></div>
+                <select formControlName="size" class="form-select">
+                    <option *ngFor="let size of sizes" [value]="size.value">{{size.display}}</option>
+                </select>
+            </div>
+
+            <div>
+                <div class="mb-2"><b>Transport:</b></div>
+                <select formControlName="transport" class="form-select">
+                    <option *ngFor="let vehicle of vehicles" [value]="vehicle.value">{{vehicle.display}}</option>
+                </select>
+            </div>
+
+            <div class="mt-3">
+                <button [disabled]="!orderDetails.valid" class="btn btn-primary" type="submit">Save Order</button>
+            </div>
+       
+    </div>
+
+</div>
+</form>

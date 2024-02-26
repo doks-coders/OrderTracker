@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center align-items-center flex-column" style="height: 70vh;">
+    <!---Greetings-->
+    <div class="d-flex align-items-center flex-column mb-3">
+        <img src="./assets/image.png" class="circle-image" alt="">
+        <h4>Welcome Back!</h4>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && login()">
+        <!-----Form-->
+        <div class="d-flex align-items-center flex-column">
+            <app-input [type]="'text'" [text]="'Email'" [formControl]="$any(loginForm.controls['email'])"></app-input>
+            <app-input [type]="'password'" [text]="'Password'"
+                [formControl]="$any(loginForm.controls['password'])"></app-input>
+        </div>
+
+        <!---Form Action Buttons-->
+        <div class="justify-content-center d-flex mt-3">
+            <button type="button" class="btn btn-outline-danger" style="margin-right: 10px;">Go To Home</button>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+
+    </form>
+
+</div>
