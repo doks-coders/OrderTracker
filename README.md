@@ -26,4 +26,4 @@ OrderTracker is a comprehensive order management system developed using Angular 
 
 
 # Model Design
-[![Order Tracker](https://firebasestorage.googleapis.com/v0/b/blogs-1c218.appspot.com/o/Screenshot%20(796).png?alt=media&token=63e26ebd-03e2-40bd-941c-6e7dd6269583)](https://firebasestorage.googleapis.com/v0/b/blogs-1c218.appspot.com/o/Screenshot%20(796).png?alt=media&token=63e26ebd-03e2-40bd-941c-6e7dd6269583)
+[![Order Tracker](https://firebasestorage.googleapis.com/v0/b/blogs-1c218.appspot.com/o/Screenshot%20(798).png?alt=media&token=85a3a331-12f4-4408-870a-f3f23fe7e67b)](https://firebasestorage.googleapis.com/v0/b/blogs-1c218.appspot.com/o/Screenshot%20(798).png?alt=media&token=85a3a331-12f4-4408-870a-f3f23fe7e67b)
