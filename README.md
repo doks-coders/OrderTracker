@@ -13,6 +13,16 @@ Built with .NET Core API and Angular, this dynamic platform empowers individuals
 ```shell
   git clone https://github.com/doks-coders/OrderTracker
 ```
+
+To run the frontend:
+```shell
+  cd Client
+```
+and
+
+```shell
+  ng serve
+```
 # About
 OrderTracker is a comprehensive order management system developed using Angular and .NET Core API. Leveraging Angular observers, it continuously listens for changes, ensuring real-time updates for efficient order tracking. With role-based access control implemented through guards, users are securely managed with distinct roles: driver, admin, and customer.
 
