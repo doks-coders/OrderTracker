@@ -35,5 +35,18 @@ OrderTracker is a comprehensive order management system developed using Angular 
 - Integration of Identity and JWT for robust authorization
 
 
+# Technologies Implemented
+- ASP.NET WebAPI 8.0
+- ASP.NET Identity Core
+- AutoMapper
+- FluentValidator
+- ASP.NET WebApi Core with JWT Bearer Authentication
+
+# Architecture
+- Full architecture with responsibility separation concerns, SOLID and Clean Code
+- Unit of work
+- Repository
+
+
 # Model Design
 [![Order Tracker](https://firebasestorage.googleapis.com/v0/b/blogs-1c218.appspot.com/o/Screenshot%20(798).png?alt=media&token=85a3a331-12f4-4408-870a-f3f23fe7e67b)](https://firebasestorage.googleapis.com/v0/b/blogs-1c218.appspot.com/o/Screenshot%20(798).png?alt=media&token=85a3a331-12f4-4408-870a-f3f23fe7e67b)
